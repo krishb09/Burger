@@ -1,0 +1,23 @@
+
+<h2>Burger Menu~</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#unless devoured}}
+      {{> burger devoured=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+
+<h2>Add a burger to the menu!</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="burger">Burger Name:</label>
+    <input type="text" id="burger" name="name">
+  </div>
+
+  <button  type="submit"><i class="fas fa-hamburger">Add</i></button>
+  {{!-- <button type="submit" class="btn"><i class="fa fa-home"></i> Add </button> --}}
+</form>

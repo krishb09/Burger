@@ -1,0 +1,36 @@
+
+body {
+	background-image: url("../img/pterry.jpg");
+} 
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+ .card {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+    background-color: rgba(255,255,255,.5);
+    width: 50%; 
+    height: 50%; 
+}
+button{
+    height:20px; 
+    width:100px; 
+    margin: -20px -50px; 
+    position:relative;
+    top:50%; 
+    left:50%;
+    width: 120px;
+    height: 60px;
+}
+
+ p{
+     color:black; 
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+     margin-left: auto;
+     margin-right: auto;
+ }
