@@ -2,19 +2,25 @@
 body {
 	background-image: url("../img/pterry.jpg");
 } 
-
 .center-block {
     display: block;
     margin-left: auto;
     margin-right: auto;
  }
-
+.eaten{
+     width: 120px;
+     height: 30px; 
+     margin-bottom: 10px; 
+ }
+ .done{
+     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+ }
  .card {
     margin: 0 auto; /* Added */
     float: none; /* Added */
     margin-bottom: 10px; /* Added */
     background-color: rgba(255,255,255,.5);
-    width: 50%; 
+    width: 70%; 
     height: 50%; 
 }
 button{
@@ -27,7 +33,6 @@ button{
     width: 120px;
     height: 60px;
 }
-
  p{
      color:black; 
      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 

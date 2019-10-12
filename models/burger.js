@@ -9,7 +9,7 @@ var burger = {
   },
   // The variables cols and vals are arrays.
   create: function(cols, vals, cb) { //cb is callback function
-    orm.create("burgers", cols, vals, function(res) {
+    orm.create("burgers",cols, vals, function(res) {
       cb(res);
     });
   },
@@ -17,7 +17,7 @@ var burger = {
     orm.update("burgers", objColVals, condition, function(res) {
       cb(res);
     });
-  },
+  }
 };
 
 // Export the database functions for the controller (catsController.js).

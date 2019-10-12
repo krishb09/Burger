@@ -8,11 +8,9 @@ var connection = require("../config/connection.js");
 // ["?", "?", "?"].toString() => "?,?,?";
 function printQuestionMarks(num) {
   var arr = [];
-
   for (var i = 0; i < num; i++) {
     arr.push("?");
   }
-
   return arr.toString();
 }
 
@@ -29,8 +27,6 @@ function objToSql(ob) {
       if (typeof value === "string" && value.indexOf(" ") >= 0) {
         value = "'" + value + "'";
       }
-      // e.g. {name: 'Lana Del Grey'} => ["name='Lana Del Grey'"]
-      // e.g. {sleepy: true} => ["sleepy=true"]
       arr.push(key + "=" + value);
     }
   }
@@ -41,8 +37,8 @@ function objToSql(ob) {
 
 // Object for all our SQL statement functions.
 var orm = {
-  all: function(tableInput, cb) {
-    var queryString = "SELECT * FROM " + tableInput + ";";
+  all: function(table, cb) {
+    var queryString = "SELECT * FROM " + table + ";";
     connection.query(queryString, function(err, result) {
       if (err) {
         throw err;
@@ -50,6 +46,8 @@ var orm = {
       cb(result);
     });
   },
+
+  //add burger to db 
   create: function(table, cols, vals, cb) {
     var queryString = "INSERT INTO " + table;
 
@@ -66,11 +64,10 @@ var orm = {
       if (err) {
         throw err;
       }
-
       cb(result);
     });
   },
-  // An example of objColVals would be {name: panther, sleepy: true}
+  // Update the db 
   update: function(table, objColVals, condition, cb) {
     var queryString = "UPDATE " + table;
 
@@ -84,11 +81,9 @@ var orm = {
       if (err) {
         throw err;
       }
-
       cb(result);
     });
   },
-
 };
 
 // Export the orm object for the model (cat.js).
