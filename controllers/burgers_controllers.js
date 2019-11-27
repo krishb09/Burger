@@ -20,7 +20,8 @@ router.get("/", function(req, res) {
 
 router.post("/api/burgers", function(req, res) {
   burger.create(["burger_name", "devoured"], [req.body.burger_name, req.body.devoured], function(result) {
-    // Send back the ID of the new quote
+    //create new entries in db for burger_name and if devoured or not 
+    // Send back the ID 
     res.json({ id: result.insertId});
   });
 });

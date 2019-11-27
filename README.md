@@ -1,5 +1,29 @@
-SUMMARY:
+# Burger App
 
-In this assignment, we created a burger logger with MySQL, Node, Express, Handlebars and a homemade ORM. Utilized the MVC design pattern; used Node and MySQL to query and route data in the app, and Handlebars to generate the HTML.
+Order a burger and add a burger of your choice to the menu!
 
-Used the MYSQL Heroku Deployment Guide in order to deploy this assignment.
+# Instructions
+
+Click the 'devour' button to add the burger to the devoured list! 
+You can also add a burger to the menu
+
+# Languages/Technologies
+* HTML
+* Bootstrap
+* JavaScript
+* jQuery
+* MySQl
+* Heroku
+* JawsDB MySQL
+* ORM 
+
+# NPM Packages
+* Express
+* Handlebars 
+
+# What It Teaches
+Using an ORM and handlebars
+
+# Deployed Link 
+
+https://immense-taiga-74105.herokuapp.com/
